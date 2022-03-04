@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import Date from "../components/date";
 import { GetStaticProps } from "next";
+import { getSortedPostsData } from "../lib/posts";
+import utilStyles from "../styles/utils.module.css";
+import Date from "../components/date";
+import Layout, { siteTitle } from "../components/layout";
 
 export default function Home({
   allPostsData,
@@ -13,7 +13,7 @@ export default function Home({
     date: string;
     title: string;
     id: string;
-  };
+  }[];
 }) {
   return (
     <Layout home>
